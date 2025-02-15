@@ -10,14 +10,14 @@ int main()
 	}
 	for(int i=1;i<n;i++)
 	{
-		int temp=arr[i]; // 
+		int temp=arr[i]; // stores the value of arr[i]
 		int j=i-1;
-		while(j>=0 && arr[j]>temp)
+		while(j>=0 && arr[j]>temp) // shift the element to the right if they are greater
 		{
 			arr[j+1]=arr[j];
 			j--;
 		}
-		arr[j+1]=temp;
+		arr[j+1]=temp; // if its not greater then store the temp in that position
 	}
 	for(int i=0;i<n;i++)
 	{
