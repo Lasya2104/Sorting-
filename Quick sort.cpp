@@ -1,5 +1,5 @@
 #include <stdio.h>
-int partition(int a[],int key,int start,int end)
+int partition(int a[],int key,int start,int end) // to return the pivot index after arranging 
 {
 	int s=start;
 	int e=end;
@@ -13,7 +13,7 @@ int partition(int a[],int key,int start,int end)
 		{
 			e--;
 		}
-		if(a[s]<a[e])
+		if(s<e)
 		{
 			int temp=a[s];
 			a[s]=a[e];
@@ -29,10 +29,10 @@ void quicksort(int a[],int n,int start,int end)
 {
 	if(start<end)
 	{
-		int p=a[start];
-		p=partition(a,p,start,end);
-		quicksort(a,n,start,p-1);
-		quicksort(a,n,p+1,end);
+		int p=a[start]; // setting first element as pivot
+		p=partition(a,p,start,end); // stores the pivot index
+		quicksort(a,n,start,p-1); // sorts the array before pivot index
+		quicksort(a,n,p+1,end); // sorts the array after pivot index
 	}
 }
 int main()
