@@ -12,7 +12,7 @@ int main()
 	{
 		for(int j=0;j<n-i-1;j++)
 		{
-			if(arr[j+1]<arr[j])
+			if(arr[j+1]<arr[j]) // checks the lesser number and swaps 
 			{
 				int temp=arr[j+1];
 				arr[j+1]=arr[j];
