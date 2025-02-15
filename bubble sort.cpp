@@ -8,11 +8,11 @@ int main()
 	{
 		scanf("%d",&arr[i]);
 	}
-	for(int i=0;i<n;i++)
+	for(int i=0;i<n;i++) 
 	{
 		for(int j=0;j<n-i-1;j++)
 		{
-			if(arr[j+1]<arr[j]) // checks the lesser number and swaps 
+			if(arr[j+1]<arr[j]) // if it is lesser then swap 
 			{
 				int temp=arr[j+1];
 				arr[j+1]=arr[j];
