@@ -10,15 +10,15 @@ int main()
 	}
 	for(int i=0;i<n-1;i++)
 	{
-		int min=i;
+		int min=i; // stores the index of i
 		for(int j=i+1;j<n;j++)
 		{
-			if(arr[j]<arr[min])
+			if(arr[j]<arr[min]) // if it is less, it stores its index and not the value and checks for the least value through the array
 			{
 				min=j;
 			}
 		}
-		int temp=arr[i];
+		int temp=arr[i]; // after finding the least value it swaps
 		arr[i]=arr[min];
 		arr[min]=temp;
 	}
